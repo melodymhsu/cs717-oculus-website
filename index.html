@@ -32,7 +32,26 @@
 
 	<h2>System Architecture and Protocol</h2>
 	<p>
+		<ul>
+			<li>TODO: will add diagrams once they are finalized</li>
+			<li>VR device has a local state about where the headset and controllers are positioned</li>
+			<li>Most games update the local state, then update the server, then reconcile the local and server states</li>
+			<li>Our application instead updates the server first, then updates the local state based on the server</li>
+			<ul>
+				<li>Allows the server to consolidate information about all players and the world state before player 
+					views are rendered locally
+				</li>
+			</ul>
+			<li>Synchonous delivery is achieved</li>
+			<ul>
+				<li>Receiving servers store messages from clients and order them by timestamp in a priority queue</li>
+				<li>Following a 65 ms delay, server responses are sent back to the clients</li>
+			</ul>
+			<li>Messages sent between client and servers are formatted using a 
+				<a href="https://developers.google.com/protocol-buffers">protocol buffer</a>. 
+			</li>
 
+		</ul>
 	</p>
 	<br />
 
@@ -49,9 +68,28 @@
 	</p>
 	<br />
 
+	<h2>Proof of Concept</h2>
+	<p>
+		<ul>
+			<li>TODO: screenshots of app</li>
+		</ul>
+		Our application allows up to 8 unique players to join a lobby, select a location, and interact with one another.
+		Movements made by a player are consistently represented among all player views at the same time, and an added
+		layer of interactivity is incorporated in the game objects placed in the environment. PLayers are able to claim
+		posession over objects and move a sphere with their controllers. To provide a tactile demonstration of the 
+		synchronized delay between user input and server responses, haptic feedback is also built into this interactive
+		component. Players can click a button to send a haptic message to all other players in the lobby, in which all 
+		players (including the player who sent the message) will feel controller rumble 65 ms after the haptic message
+		was sent.
+
+	</p>
+	<br />
+
 	<h2>Metrics</h2>
 	<p>
-
+		<ul>
+			<li>TODO: final metric graphs</li>
+		</ul>
 	</p>
 	<br />
 	
