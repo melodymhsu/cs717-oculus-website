@@ -5,21 +5,56 @@
 <body>
 
 	<!-- Title -->
-	<h1 style="background-color:lightcyan;">Realtime Interactive VR Across Continental US</h1>
-	<br />
-
-	<h2>Text Example</h2>
+	<h1 style="background-color:lightcyan;">Real-Time Collaborative Virtual Reality Across the Continent</h1>
+	
 	<p>
-		<strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry.
-		<i>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</i>,
-		when an unknown printer took a galley of type and scrambled it to make a type
-		specimen book. <u>It has survived not only five centuries</u>, but also the leap into
-		electronic typesetting, remaining essentially unchanged. It was popularised in
-		the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-		and more recently with desktop publishing software like Aldus PageMaker
-		including versions of <s>Lorem Ipsum</s>.
+		<strong>Bohan Wu | Brandon Fremin | Junjie Lei | Melody Hsu</strong>
+	</p>
+
+	<h2>Overview</h2>
+	<p>
+		Virtual Reality (VR) is a rapidly evolving area of technology that is becoming increasingly prevalent in 
+		a wide area of applications such as art, education, business, entertainment, and much more. 
+
+		With such diversity in its applications, what our team aims to address is how we can use VR to develop
+		the future of virtual real-time collaboration and communication. Our goal is to ensure that within the 
+		continental United States, users joining a common virtual space are experiencing events and interacting 
+		at the same time. Additionally, all users should see a consistent view of the world as it changes in response 
+		to user input and interaction.
+		
+		Perhaps the most notable of the currently released VR devices (as of May 2022) is Meta's Oculus Quest 2, 
+		which is what our team uses in our project development. Using the Oculus Quest, Unity Engine for game 
+		development, and <a href="http://www.spines.org/">Spines</a> infrastructure to impose artificial latencies
+		in server communication, we created an application that is extensible to general VR devices and enables
+		players to interact in real-time (&lt; 65 ms delay).
 	</p>
 	<br />
+
+	<h2>System Architecture and Protocol</h2>
+	<p>
+
+	</p>
+	<br />
+
+	<h2>Spines</h2>
+	<p>
+		<img src="./interactive_vr_assets/images/continental_spines_overlay.png" width="600">
+		<br>
+		On each of the 8 servers we had running in the <a href="https://www.cnds.jhu.edu/">Distributed Systems and Networks</a> 
+		lab, a Spines daemon was run to represent one of the above locations. Each link between two locations represents
+		the one-way trip time in miliseconds. By having a server represent each location and using Spines to create artificial 
+		links between servers, we emulated the transcontinental path that packets take when routed to and from different 
+		destinations across the United States.
+		
+	</p>
+	<br />
+
+	<h2>Metrics</h2>
+	<p>
+
+	</p>
+	<br />
+	
 
 	<!-- Example of how to add image from local file directory -->
 	<h2>Image Example</h2>
