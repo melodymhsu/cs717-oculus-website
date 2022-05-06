@@ -1,6 +1,6 @@
 <!-- Example of how to add comments -->
 
-<html style="padding:35px;">
+<html style="padding:50px;">
 
 <body>
 
@@ -25,7 +25,7 @@
 		Perhaps the most notable of the currently released VR devices (as of May 2022) is Meta's Oculus Quest 2, 
 		which is what our team uses in our project development. Using the Oculus Quest, Unity Engine for game 
 		development, and <a href="http://www.spines.org/">Spines</a> infrastructure to impose artificial latencies
-		in server communication, we created an application that is extensible to general VR devices and enables
+		in server-to-server communication, we created an application that is extensible to general VR devices and enables
 		players to interact in real-time (&lt; 65 ms delay).
 	</p>
 	<br />
@@ -75,13 +75,12 @@
 		</ul>
 		Our application allows up to 8 unique players to join a lobby, select a location, and interact with one another.
 		Movements made by a player are consistently represented among all player views at the same time, and an added
-		layer of interactivity is incorporated in the game objects placed in the environment. PLayers are able to claim
+		layer of interactivity is incorporated in the game objects placed in the environment. Players are able to claim
 		posession over objects and move a sphere with their controllers. To provide a tactile demonstration of the 
 		synchronized delay between user input and server responses, haptic feedback is also built into this interactive
 		component. Players can click a button to send a haptic message to all other players in the lobby, in which all 
-		players (including the player who sent the message) will feel controller rumble 65 ms after the haptic message
-		was sent.
-
+		players (including the player who sent the message) will feel a controller rumble 65 ms after the haptic message
+		is sent.
 	</p>
 	<br />
 
@@ -90,23 +89,12 @@
 		<ul>
 			<li>TODO: final metric graphs</li>
 		</ul>
+		<h2>Image Example</h2>
+		<img src="./interactive_vr_assets/images/CHI_receive.png" width="600" height="400">
+	<br />
 	</p>
 	<br />
-	
 
-	<!-- Example of how to add image from local file directory -->
-	<h2>Image Example</h2>
-	<!-- Setting both height/width overrides ascept ratio -->
-	<img src="./interactive_vr_assets/images/CHI_receive.png" width="600" height="400">
-	<br />
-
-	<h2>Link Example</h2>
-	<p>
-		I like dogs a lot. Here are some
-		<a href="https://www.goodhousekeeping.com/life/pets/g4531/cutest-dog-breeds/">cute dogs</a>
-		. I hope you like dogs too :)
-	</p>
-	<br />
 
 	<h2>Table Example</h2>
 	<table border="1px solid black">
@@ -147,19 +135,6 @@
 	</video>
 	<br />
 
-	<h2>List Example</h2>
-	<ul>
-		<li>Coffee</li>
-		<li>Tea
-			<ul>
-				<li>Sweet tea</li>
-				<li>Black tea</li>
-				<li>Passion tea</li>
-				<li>Green tea</li>
-			</ul>
-		</li>
-		<li>Milk</li>
-	</ul>
 </body>
 
 </html>
